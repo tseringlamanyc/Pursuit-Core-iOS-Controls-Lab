@@ -10,12 +10,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var valueStepper: UIStepper!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var typeOfCard: UILabel!
-    @IBOutlet weak var cardNumber: UIImageView!
     @IBOutlet weak var cardSuit: UIImageView!
+    @IBOutlet weak var cardNumber: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardSuit.image = nil
+        cardSuit.image = UIImage.init(systemName: "suit.diamond.fill")
+        cardNumber.textColor = .blue
+        cardNumber.text = "A"
+        configureStepper()
         
     }
     
@@ -50,6 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeValue(_ sender: UIStepper) {
+        cardNumber.text = String(sender.value)
     }
     
 }
