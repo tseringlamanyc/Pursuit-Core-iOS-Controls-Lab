@@ -13,13 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardSuit: UIImageView!
     @IBOutlet weak var cardNumber: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cardSuit.image = UIImage.init(systemName: "suit.diamond.fill")
         cardNumber.textColor = .blue
         cardNumber.text = "A"
         configureStepper()
+        nameCard()
         
+    }
+    
+    func nameCard () {
+        typeOfCard.text = "\(suitSegmented.tag)"
     }
     
     func configureStepper() {
@@ -45,7 +51,7 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
     
     
     @IBAction func selectSuit(_ sender: UISegmentedControl) {
@@ -53,7 +59,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeValue(_ sender: UIStepper) {
-        cardNumber.text = String(sender.value)
+        switch sender.value {
+        case 1:
+            cardNumber.text = "A"
+        case 2:
+            cardNumber.text = "2"
+        case 3:
+            cardNumber.text = "3"
+        case 4:
+            cardNumber.text = "4"
+        case 5:
+            cardNumber.text = "5"
+        case 6:
+            cardNumber.text = "6"
+        case 7:
+            cardNumber.text = "7"
+        case 8:
+            cardNumber.text = "8"
+        case 9:
+            cardNumber.text = "9"
+        case 10:
+            cardNumber.text = "1O"
+        case 11:
+            cardNumber.text = "J"
+        case 12:
+            cardNumber.text = "Q"
+        case 13:
+            cardNumber.text = "K"
+        default:
+            cardNumber.text = "0"
+        }
     }
     
 }
