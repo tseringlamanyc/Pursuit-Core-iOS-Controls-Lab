@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     func configureStepper() {
-        valueStepper.minimumValue = 1
+        valueStepper.minimumValue = 0
         valueStepper.maximumValue = 13
         valueStepper.stepValue = 1
         valueStepper.value = 1
@@ -86,6 +86,7 @@ class ViewController: UIViewController {
             cardNumber.text = "Q"
         case 13:
             cardNumber.text = "K"
+            sender.value = 0
         default:
             cardNumber.text = "0"
         }
