@@ -10,10 +10,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var valueStepper: UIStepper!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var typeOfCard: UILabel!
-    
+    @IBOutlet weak var cardNumber: UIImageView!
+    @IBOutlet weak var cardSuit: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cardSuit.image = nil
         
     }
     
@@ -28,15 +30,15 @@ class ViewController: UIViewController {
         didSet {
             switch suitSegmented.selectedSegmentIndex {
             case 0:
-                cardImage.image = #imageLiteral(resourceName: "cat")
+                cardSuit.image = UIImage.init(systemName: "suit.diamond.fill")
             case 1:
-                cardImage.image = #imageLiteral(resourceName: "dog")
+                cardSuit.image = UIImage.init(systemName: "heart.fill")
             case 2:
-                cardImage.image = #imageLiteral(resourceName: "pitons")
+                cardSuit.image = UIImage.init(systemName: "suit.spade.fill")
             case 3:
-                cardImage.image = #imageLiteral(resourceName: "pursuit")
+                cardSuit.image = UIImage.init(systemName: "suit.club.fill")
             default:
-                cardImage.image = #imageLiteral(resourceName: "pursuit")
+                cardSuit.image = #imageLiteral(resourceName: "pursuit")
             }
         }
     }

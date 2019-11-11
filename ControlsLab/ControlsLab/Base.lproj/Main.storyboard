@@ -56,23 +56,33 @@
                                     <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="gAP-IE-JPF"/>
                                 </connections>
                             </stepper>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6U-K3-dPL">
-                                <rect key="frame" x="66" y="360" width="282" height="382"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-zB-a62">
-                                <rect key="frame" x="27" y="768" width="367" height="21"/>
+                                <rect key="frame" x="24" y="800" width="367" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blank_munchkin_door_card_template_by_cornixt_d5cwcin-fullview" translatesAutoresizingMaskIntoConstraints="NO" id="r6U-K3-dPL">
+                                <rect key="frame" x="27" y="378" width="367" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-rJ-hqX" userLabel="number">
+                                <rect key="frame" x="123" y="537" width="79" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="suit.club.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Srw-SS-Mgu" userLabel="suit">
+                                <rect key="frame" x="210" y="537" width="79" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cardImage" destination="r6U-K3-dPL" id="j7k-nl-y79"/>
+                        <outlet property="cardNumber" destination="kg6-rJ-hqX" id="Nt0-GQ-2EW"/>
+                        <outlet property="cardSuit" destination="Srw-SS-Mgu" id="1ct-6N-fKb"/>
                         <outlet property="choseValueLabel" destination="y5W-oy-3KW" id="T1n-eA-yY8"/>
                         <outlet property="selectSuit" destination="XUT-Te-miq" id="Ypu-9E-NPE"/>
                         <outlet property="suitSegmented" destination="Evl-Cg-RZ9" id="Dhx-1a-RED"/>
@@ -87,6 +97,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blank_munchkin_door_card_template_by_cornixt_d5cwcin-fullview" width="900" height="1400"/>
+        <image name="cat" width="200" height="200"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="suit.club.fill" catalog="system" width="64" height="60"/>
         <image name="suit.diamond.fill" catalog="system" width="52" height="64"/>
